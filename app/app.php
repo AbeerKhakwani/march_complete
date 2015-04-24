@@ -36,22 +36,12 @@
 $app->get("/car", function() {
 
 
-    $new_car1 = new Car("Ford 2014",300000,5000,"ford.jpg");
-    $new_car2 = new Car("Chevy 2014",250000,5600,"chevy.jpg");
-    $new_car3 = new Car("Porsche 2014",36034,60093,"ford.jpg");
+    $new_car1 = new Car("Ford 2014",3000,500,"ford.jpg");
+    $new_car2 = new Car("Chevy 2014",2500,560,"chevy.jpg");
+    $new_car3 = new Car("Porsche 2014",3604,693,"ford.jpg");
 
     $array = array($new_car1,$new_car2,$new_car3);
     $cars_matching_search = array();
-
-
-
-
-
-
-
-
-
-
 foreach ($array as $car)
       {
           if($car->worthBuying($_GET['price'],$_GET['mileage'])){
